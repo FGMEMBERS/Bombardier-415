@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>tour</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- Pilote
+  <model>
+    <path>Aircraft/C-2A/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -6.574 </x-m>
+      <y-m> -0.406 </y-m>
+      <z-m> -0.265 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg>   0.0 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model> -->
+
+  <!-- Planche de bord -->
+  <model>
+    <path>Aircraft/Bombardier-415/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -8.210 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.534 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+

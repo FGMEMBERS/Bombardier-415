@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************
+
+************************************************************************
+-->
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <author>BARANGER Emmanuel (3D/FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+   
+    <fuel-fraction>1.0</fuel-fraction>
+  
+    <startup>
+      <splash-texture>Aircraft/Bombardier-415/cl415-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path>Aircraft/Bombardier-415/Sounds/cl415-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/Bombardier-415/Models/cl415.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model> 
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int" n="0">0</int>
+        <int type="int" n="1">0</int>
+        <int type="int" n="2">0</int>
+        <int type="int" n="3">0</int>
+        <int type="int" n="4">0</int>
+        <int type="int" n="5">0</int>
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Bombardier 415</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close crew door</desc>
+      </key>
+      <key>
+        <name>D</name>
+        <desc>Open/Close door</desc>
+      </key>
+    </help>
+
+    <menubar include="Dialogs/cl415-menu.xml"/>
+
+    <systems>
+      <electrical>
+        <path></path>
+      </electrical>
+    </systems>
+
+  </sim>
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>3</magnetos>
+      </engine>
+      <engine n="1">
+        <magnetos>3</magnetos>
+      </engine>
+    </engines>
+    <gear>
+      <brake-parking>1</brake-parking>
+      <tailwheel-lock type="bool">false</tailwheel-lock>
+    </gear>
+  </controls>
+
+  <engines>
+    <engine>
+      <rpm type="double">700</rpm>
+    </engine>
+    <engine>
+      <rpm type="double">700</rpm>
+    </engine>
+  </engines>
+  
+  <nasal>
+    <cl415>
+      <file>Aircraft/Bombardier-415/Nasal/liveries.nas</file>
+      <file>Aircraft/Bombardier-415/Nasal/doors.nas</file>
+      <file>Aircraft/Bombardier-415/Nasal/light.nas</file>
+    </cl415>
+  </nasal>
+
+</PropertyList>
