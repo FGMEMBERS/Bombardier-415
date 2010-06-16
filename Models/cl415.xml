@@ -31,6 +31,7 @@
     <object-name>flotteurG</object-name>
     <object-name>flotteurD</object-name>
     <object-name>surailes</object-name>
+    <object-name>trous</object-name>
 
     <object-name>roueA</object-name>
     <object-name>axeA</object-name>
@@ -62,22 +63,6 @@
   </animation>
 
   <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>glass_shader.png</texture>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitres</object-name>
-    <object-name>propdiscG</object-name>
-    <object-name>propblurG</object-name>
-    <object-name>propdiscD</object-name>
-    <object-name>propblurD</object-name>
-  </animation>
-
-  <animation>
     <type>material</type>
     <object-name>fuselage</object-name>
     <object-name>ailes</object-name>
@@ -96,6 +81,7 @@
     <object-name>flotteurG</object-name>
     <object-name>flotteurD</object-name>
     <object-name>surailes</object-name>
+    <object-name>trous</object-name>
 
     <object-name>roueA</object-name>
     <object-name>axeA</object-name>
@@ -150,6 +136,52 @@
       <shininess-prop>shininess</shininess-prop>
     </shininess>
 -->
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>ailes</object-name>
+    <object-name>derive</object-name>
+    <object-name>derive2</object-name>
+    <object-name>bolG</object-name>
+    <object-name>bolD</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletG</object-name>
+    <object-name>voletD</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>direction</object-name>
+    <object-name>heliceG</object-name>
+    <object-name>heliceD</object-name>
+    <object-name>flotteurG</object-name>
+    <object-name>flotteurD</object-name>
+    <object-name>surailes</object-name>
+
+    <object-name>porteG</object-name>
+    <object-name>porteD</object-name>
+
+    <object-name>parapG1</object-name>
+    <object-name>parapG2</object-name>
+
+    <object-name>parapD1</object-name>
+    <object-name>parapD2</object-name>
+  </effect>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitres</object-name>
+    <object-name>propdiscG</object-name>
+    <object-name>propblurG</object-name>
+    <object-name>propdiscD</object-name>
+    <object-name>propblurD</object-name>
   </animation>
 
   <!-- Interieur -->

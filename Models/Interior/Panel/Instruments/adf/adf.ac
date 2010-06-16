@@ -3,10 +3,9 @@ MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 
 MATERIAL "illum" rgb 1 1 1 amb 0 0 0 emis 1 1 1 spec 0 0 0 shi 0 trans 0
 MATERIAL "illum.green" rgb 0 0 0 amb 0 0 0 emis 0.346667 0.346667 0.346667 spec 0 0 0 shi 0 trans 0
 MATERIAL "illum.yellow" rgb 0 0 0 amb 0 0 0 emis 0.683333 0.683333 0.683333 spec 0 0 0 shi 0 trans 0
-MATERIAL "DefaultWhite.001" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
 MATERIAL "DefaultWhite" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0.5 0.5 0.5 shi 64 trans 0
 MATERIAL "illum.blue" rgb 0 0 0 amb 0 0 0 emis 0.56 0.56 0.56 spec 0 0 0 shi 0 trans 0
-MATERIAL "transparent" rgb 0.547091 0.565624 0.595981 amb 0 0 0 emis 0 0 0 spec 1 1 1 shi 64 trans 0.5
+MATERIAL "transparent" rgb 0.547091 0.565624 0.595981 amb 0 0 0 emis 0 0 0 spec 1 1 1 shi 64 trans 0.85
 OBJECT world
 kids 11
 OBJECT poly
@@ -1631,28 +1630,28 @@ numvert 12
 0.000418 0.04069 6.6e-05
 numsurf 4
 SURF 0x00
-mat 6
+mat 5
 refs 4
 0 0.924482226372 0.503499686718
 2 0.933442831039 0.503499686718
 3 0.933442831039 0.508933246136
 1 0.928461313248 0.508933246136
 SURF 0x00
-mat 6
+mat 5
 refs 4
 4 0.915519356728 0.503499686718
 7 0.924482226372 0.503499686718
 6 0.920503020287 0.508933246136
 5 0.915519356728 0.508933246136
 SURF 0x00
-mat 6
+mat 5
 refs 4
 2 0.933442831039 0.503499686718
 0 0.924482226372 0.503499686718
 8 0.924482226372 0.500907361507
 9 0.933442831039 0.500907361507
 SURF 0x00
-mat 6
+mat 5
 refs 4
 7 0.924482226372 0.503499686718
 4 0.915519356728 0.503499686718
@@ -1671,7 +1670,7 @@ numvert 4
 0.004407 -0.045936 -0.045945
 numsurf 1
 SURF 0x10
-mat 7
+mat 6
 refs 4
 1 8.10823408415e-08 1.0
 0 0.0 8.10823479469e-08

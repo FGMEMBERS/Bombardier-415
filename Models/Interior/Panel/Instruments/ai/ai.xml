@@ -6,9 +6,10 @@
 
   <animation>
     <object-name>fond</object-name>
-    <object-name>AI</object-name>
+    <object-name>ai</object-name>
     <object-name>pointer</object-name>
-    <object-name>FDbars</object-name>
+    <object-name>airoll</object-name>
+    <object-name>fdbars</object-name>
     <object-name>rollptr</object-name>
 
     <object-name>vitre</object-name>
@@ -22,27 +23,28 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>shader.png</texture>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>vitre</object-name>
   </animation>
 
   <animation>
     <type>material</type>
-    <object-name>AI</object-name>
+    <object-name>ai</object-name>
+    <object-name>airoll</object-name>
     <object-name>pointer</object-name>
-    <object-name>FDbars</object-name>
+    <object-name>fdbars</object-name>
     <object-name>rollptr</object-name>
     <emission>
-      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
       <red>   0.50 </red>
       <green> 0.25 </green>
       <blue>  0.25 </blue>
-    </emission>
+    </emission> 
   </animation>
 
   <animation>
     <type>select</type>
-    <object-name>FDbars</object-name>
+    <object-name>fdbars</object-name>
     <condition>
         <equals>
           <property>/instrumentation/flightdirector/fd-on</property>
@@ -53,7 +55,7 @@
 
   <animation>
     <type>rotate</type>
-    <object-name>FDbars</object-name>
+    <object-name>fdbars</object-name>
     <property>/instrumentation/flightdirector/vbar-roll</property>
     <axis>
       <x>1.0</x>
@@ -64,7 +66,7 @@
 
   <animation>
     <type>translate</type>
-    <object-name>FDbars</object-name>
+    <object-name>fdbars</object-name>
     <property>/instrumentation/flightdirector/vbar-pitch</property>
     <factor>0.0014</factor>
     <axis>
@@ -76,7 +78,7 @@
 
   <animation>
     <type>texmultiple</type>
-    <object-name>AI</object-name>
+    <object-name>ai</object-name>
     <transform>
       <property>/orientation/pitch-deg</property>
       <subtype>textranslate</subtype>

@@ -39,6 +39,8 @@
         <int type="int" n="3">0</int>
         <int type="int" n="4">0</int>
         <int type="int" n="5">0</int>
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
       </generic>
     </multiplay>
 
@@ -55,12 +57,6 @@
     </help>
 
     <menubar include="Dialogs/cl415-menu.xml"/>
-
-    <systems>
-      <electrical>
-        <path></path>
-      </electrical>
-    </systems>
 
   </sim>
 
@@ -91,9 +87,11 @@
   <nasal>
     <cl415>
       <file>Aircraft/Bombardier-415/Nasal/liveries.nas</file>
-      <file>Aircraft/Bombardier-415/Nasal/doors.nas</file>
       <file>Aircraft/Bombardier-415/Nasal/light.nas</file>
     </cl415>
+    <doors>
+      <file>Aircraft/Bombardier-415/Nasal/doors.nas</file>
+    </doors>
   </nasal>
 
 </PropertyList>

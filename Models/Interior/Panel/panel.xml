@@ -1,6 +1,6 @@
-<?xml version="1.0"?>
-<!-- Tableau de bord de Bombardier 415
-      
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Tableau de bord de Bombardier 415    
      Base de travail principale : http://www.oognok.ca/415/photos/images/IMG_4821_JPG.jpg
  -->
 
@@ -33,7 +33,7 @@
   <model>
     <path>Aircraft/Bombardier-415/Models/Interior/Panel/Instruments/ai/ai.xml</path>
     <offsets>
-      <x-m>  0.077 </x-m>
+      <x-m>  0.079 </x-m>
       <y-m> -0.551 </y-m>
       <z-m>  0.032 </z-m>
       <roll-deg>      0.000 </roll-deg>
@@ -45,7 +45,7 @@
   <model>
     <path>Aircraft/Bombardier-415/Models/Interior/Panel/Instruments/ai/ai.xml</path>
     <offsets>
-      <x-m> 0.077 </x-m>
+      <x-m> 0.079 </x-m>
       <y-m> 0.551 </y-m>
       <z-m> 0.032 </z-m>
       <roll-deg>      0.000 </roll-deg>
@@ -58,7 +58,7 @@
   <model>
     <path>Aircraft/Bombardier-415/Models/Interior/Panel/Instruments/adf/adf.xml</path>
     <offsets>
-      <x-m>  0.104 </x-m>
+      <x-m>  0.079 </x-m>
       <y-m> -0.551 </y-m>
       <z-m> -0.089 </z-m>
       <roll-deg>      0.000 </roll-deg>
@@ -70,7 +70,7 @@
   <model>
     <path>Aircraft/Bombardier-415/Models/Interior/Panel/Instruments/adf/adf.xml</path>
     <offsets>
-      <x-m>  0.104 </x-m>
+      <x-m>  0.079 </x-m>
       <y-m>  0.551 </y-m>
       <z-m> -0.089 </z-m>
       <roll-deg>      0.000 </roll-deg>
@@ -83,7 +83,7 @@
   <model>
     <path>Aircraft/Bombardier-415/Models/Interior/Panel/Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m>  0.077 </x-m>
+      <x-m>  0.079 </x-m>
       <y-m> -0.665 </y-m>
       <z-m>  0.017 </z-m>
       <roll-deg>      0.000 </roll-deg>
@@ -95,7 +95,7 @@
   <model>
     <path>Aircraft/Bombardier-415/Models/Interior/Panel/Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m> 0.077 </x-m>
+      <x-m> 0.079 </x-m>
       <y-m> 0.435 </y-m>
       <z-m> 0.017 </z-m>
       <roll-deg>      0.000 </roll-deg>
@@ -108,7 +108,7 @@
   <model>
     <path>Aircraft/Bombardier-415/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m>  0.077 </x-m>
+      <x-m>  0.079 </x-m>
       <y-m> -0.435 </y-m>
       <z-m>  0.017 </z-m>
       <roll-deg>      0.000 </roll-deg>
@@ -120,7 +120,7 @@
   <model>
     <path>Aircraft/Bombardier-415/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m> 0.077 </x-m>
+      <x-m> 0.079 </x-m>
       <y-m> 0.665 </y-m>
       <z-m> 0.017 </z-m>
       <roll-deg>      0.000 </roll-deg>
@@ -133,7 +133,7 @@
   <model>
     <path>Aircraft/Bombardier-415/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
     <offsets>
-      <x-m>  0.098 </x-m>
+      <x-m>  0.100 </x-m>
       <y-m> -0.435 </y-m>
       <z-m> -0.074 </z-m>
       <roll-deg>      0.000 </roll-deg>
@@ -145,7 +145,7 @@
   <model>
     <path>Aircraft/Bombardier-415/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
     <offsets>
-      <x-m>  0.098 </x-m>
+      <x-m>  0.100 </x-m>
       <y-m>  0.665 </y-m>
       <z-m> -0.074 </z-m>
       <roll-deg>      0.000 </roll-deg>
@@ -197,8 +197,8 @@
     <object-name>throttleG</object-name>
     <property>/controls/engines/engine[0]/throttle</property>
     <interpolation>
-      <entry><ind>  0.0 </ind><dep>   0.0 </dep></entry>
-      <entry><ind>  1.0 </ind><dep> -85.0 </dep></entry>
+      <entry><ind>  0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  1 </ind><dep> -85 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.311 </x-m>
@@ -217,8 +217,8 @@
     <object-name>throttleD</object-name>
     <property>/controls/engines/engine[1]/throttle</property>
     <interpolation>
-      <entry><ind>  0.0 </ind><dep>   0.0 </dep></entry>
-      <entry><ind>  1.0 </ind><dep> -85.0 </dep></entry>
+      <entry><ind>  0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  1 </ind><dep> -85 </dep></entry>
     </interpolation>
     <center>
       <x-m>  0.311 </x-m>
