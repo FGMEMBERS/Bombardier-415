@@ -113,7 +113,8 @@
     <object-name>axeG4</object-name>
     <object-name>parapG1</object-name>
     <object-name>parapG2</object-name>
-
+    <object-name>trappeG</object-name>
+    
     <object-name>roueD</object-name>
     <object-name>axeD1</object-name>
     <object-name>axeD2</object-name>
@@ -121,43 +122,28 @@
     <object-name>axeD4</object-name>
     <object-name>parapD1</object-name>
     <object-name>parapD2</object-name>
-
+    <object-name>trappeD</object-name>
+    
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
     <object-name>fuselage</object-name>
     <object-name>ailes</object-name>
     <object-name>moteurs</object-name>
@@ -187,6 +173,40 @@
     <object-name>parapD2</object-name>
   </effect>
 
+  <effect>
+    <inherits-from>Effects/model-combined-deferred</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>fuselage</object-name>
+    <object-name>ailes</object-name>
+    <object-name>moteurs</object-name>
+    <object-name>derive</object-name>
+    <object-name>derive2</object-name>
+    <object-name>bolG</object-name>
+    <object-name>bolD</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletG</object-name>
+    <object-name>voletD</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>direction</object-name>
+    <object-name>heliceG</object-name>
+    <object-name>heliceD</object-name>
+    <object-name>flotteurG</object-name>
+    <object-name>flotteurD</object-name>
+    <object-name>surailes</object-name>
+    
+    <object-name>porteG</object-name>
+    <object-name>porteD</object-name>
+    
+    <object-name>parapG1</object-name>
+    <object-name>parapG2</object-name>
+    
+    <object-name>parapD1</object-name>
+    <object-name>parapD2</object-name>
+  </effect>
+  
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
@@ -203,16 +223,41 @@
     <object-name>propblurD</object-name>
   </animation>
 
-  <!-- Interieur -->
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitres</object-name>
+    <object-name>propdiscG</object-name>
+    <object-name>propblurG</object-name>
+    <object-name>propdiscD</object-name>
+    <object-name>propblurD</object-name>
+  </effect>
+  
+  <!-- Une ombre pour OSG -->
   <model>
-    <path>Aircraft/Bombardier-415/Models/Interior/interior.xml</path>
+  <path>Aircraft/Bombardier-415/Models/shadow.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
+      <x-m>  0 </x-m>
+      <y-m>  0 </y-m>
+      <z-m> -4 </z-m>
     </offsets>
   </model>
+  
+  <!-- Interieur -->
+  <model>
+    <name>Interieur</name>
+    <path>Aircraft/Bombardier-415/Models/Interior/interior.xml</path>
+  </model>
 
+  <!-- For Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>Interieur</object-name>
+  </animation>
+  
   <!-- Trainée Centrale -->
   <model>
     <path>Aircraft/Bombardier-415/Models/Effects/wake/wake.xml</path>
@@ -220,9 +265,7 @@
       <x-m>  6.453 </x-m>
       <y-m>  0.000 </y-m>
       <z-m> -3.500 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> -45 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model> 
 
@@ -233,9 +276,7 @@
       <x-m>  -1.450 </x-m>
       <y-m> -13.202 </y-m>
       <z-m>  -2.663 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> -45 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model> 
 
@@ -246,9 +287,7 @@
       <x-m>  -1.450 </x-m>
       <y-m>  13.202 </y-m>
       <z-m>  -2.663 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> -45 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model> 
 
@@ -364,6 +403,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceGauche</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>engines/engine[0]/rpm</property>
     <factor> 0.5 </factor>
     <center>
@@ -421,6 +466,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceDroite</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[1]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>engines/engine[1]/rpm</property>
     <factor> 0.5 </factor>
     <center>
@@ -435,16 +486,50 @@
     </axis>
   </animation>
 
+  <!-- Gouverne de profondeur -->
+  <animation>
+    <type>rotate</type>
+    <object-name>profondeur</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 15 </factor>
+    <center>
+      <x-m> 8.04087 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 1.02068 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y> 
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <!-- Gouverne de direction -->
+  <animation>
+    <type>rotate</type>
+    <object-name>direction</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> -15 </factor>
+    <axis>
+      <x1-m>  7.98342 </x1-m>
+      <y1-m>  0.00000 </y1-m>
+      <z1-m> -0.69605 </z1-m>
+      <x2-m>  8.89526 </x2-m>
+      <y2-m>  0.00000 </y2-m>
+      <z2-m>  3.23247 </z2-m>
+    </axis>
+  </animation>
+  
   <!-- Ailerons -->
   <animation>
     <type>rotate</type>
     <object-name>aileronG</object-name>
     <property>surface-positions/left-aileron-pos-norm</property>
-    <factor> 25 </factor>
+    <factor> 15 </factor>
     <center>
-      <x-m>  -0.502 </x-m>
-      <y-m> -11.401 </y-m>
-      <z-m>  -0.548 </z-m>
+      <x-m>  -0.39350 </x-m>
+      <y-m> -11.40062 </y-m>
+      <z-m>  -0.54819 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -457,11 +542,11 @@
     <type>rotate</type>
     <object-name>aileronD</object-name>
     <property>surface-positions/right-aileron-pos-norm</property>
-    <factor> 25 </factor>
+    <factor> 15 </factor>
     <center>
-      <x-m> -0.502 </x-m>
-      <y-m> 11.401 </y-m>
-      <z-m> -0.548 </z-m>
+      <x-m> -0.39350 </x-m>
+      <y-m> 11.40062 </y-m>
+      <z-m> -0.54819 </z-m>
     </center>
     <axis>
       <x> 0 </x>
@@ -505,40 +590,6 @@
     </axis>
   </animation>
 
-  <!-- Gouverne de profondeur -->
-  <animation>
-    <type>rotate</type>
-    <object-name>profondeur</object-name>
-    <property>surface-positions/elevator-pos-norm</property>
-    <factor> 25 </factor>
-    <center>
-      <x-m> 7.896 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 1.021 </z-m>
-    </center>
-    <axis>
-      <x> 0 </x>
-      <y> 1 </y> 
-      <z> 0 </z>
-    </axis>
-  </animation>
-
-  <!-- Gouverne de direction -->
-  <animation>
-    <type>rotate</type>
-    <object-name>direction</object-name>
-    <property>surface-positions/rudder-pos-norm</property>
-    <factor> -25 </factor>
-    <axis>
-      <x1-m>  7.859 </x1-m>
-      <y1-m>  0.000 </y1-m>
-      <z1-m> -0.688 </z1-m>
-      <x2-m>  8.811 </x2-m>
-      <y2-m>  0.000 </y2-m>
-      <z2-m>  3.232 </z2-m>
-    </axis>
-  </animation>
-  
   <!-- portes des trains -->
   <animation>
     <type>rotate</type>
@@ -967,5 +1018,59 @@
     </axis>
   </animation>
 
-</PropertyList>
+  <!-- Ajout des effets lumineux -->
+  <model>
+    <path>Aircraft/Bombardier-415/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> 8.29016 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 4.35312 </z-m>
+    </offsets>
+  </model>
 
+  <model>
+    <path>Aircraft/Bombardier-415/Models/light/beacon.xml</path>
+    <offsets>
+      <x-m> -2.46536 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.18448 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Bombardier-415/Models/light/RedLight.xml</path>
+    <offsets>
+      <x-m>  -2.26491 </x-m>
+      <y-m> -14.34400 </y-m>
+      <z-m>   0.63783 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Bombardier-415/Models/light/StrobeLight.xml</path>
+    <offsets>
+      <x-m>  -2.24793 </x-m>
+      <y-m> -14.34400 </y-m>
+      <z-m>   0.63783 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Bombardier-415/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m> -2.26491 </x-m>
+      <y-m> 14.34400 </y-m>
+      <z-m>  0.63783 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Bombardier-415/Models/light/StrobeLight.xml</path>
+    <offsets>
+      <x-m> -2.24793 </x-m>
+      <y-m> 14.34400 </y-m>
+      <z-m>  0.63783 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

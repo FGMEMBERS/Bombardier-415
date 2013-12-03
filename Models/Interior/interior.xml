@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -7,8 +7,11 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
-    <object-name>tour</object-name>
-
+    <object-name>inttour</object-name>
+    <object-name>cloison</object-name>
+    <object-name>cotes</object-name>
+    <object-name>planchet</object-name>
+    
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
   </animation>
@@ -25,18 +28,24 @@
     <object-name>intvitres</object-name>
   </animation>
 
-  <!-- Pilote
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>intvitres</object-name>
+  </effect>
+
+  <!-- Pilote -->
   <model>
-    <path>Aircraft/C-2A/Models/Pilot/pilot.xml</path>
+    <path>Aircraft/Bombardier-415/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m> -6.574 </x-m>
-      <y-m> -0.406 </y-m>
-      <z-m> -0.265 </z-m>
-      <roll-deg>    0.0 </roll-deg>
-      <pitch-deg>   0.0 </pitch-deg>
-      <heading-deg> 0.0 </heading-deg>
+      <x-m> -7.35 </x-m>
+      <y-m> -0.53 </y-m>
+      <z-m> -1.53 </z-m>
     </offsets>
-  </model> -->
+  </model>
 
   <!-- Planche de bord -->
   <model>
@@ -49,4 +58,3 @@
   </model>
 
 </PropertyList>
-

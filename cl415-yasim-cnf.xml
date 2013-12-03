@@ -1,16 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-************************************************************************
-Bombardier 415 - Canadair CL 415
-December 2008/June 2010 BARANGER Emmanuel
-************************************************************************
--->
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList include="cl415-base.xml">
 
   <sim>
 
     <description>Bombardier 415 (YASim)</description>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
     <flight-model>yasim</flight-model>
     <aero>cl415-yasim</aero>
 
