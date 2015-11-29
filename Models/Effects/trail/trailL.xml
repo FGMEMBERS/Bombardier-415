@@ -12,12 +12,18 @@
     <condition>
       <and>
         <greater-than>
-          <property>/engines/engine[0]/n2</property>
+          <!-- /engines/engine[0]/n2 -->
+          <property>sim/multiplay/generic/float[4]</property>
           <value>50</value>
         </greater-than>
         <greater-than>
-          <property>/position/altitude-ft</property>
+          <!-- /position/altitude-ft -->
+          <property>sim/multiplay/generic/float[3]</property>
           <value>3000</value>
+        </greater-than>
+        <greater-than>
+          <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+          <value>150</value>
         </greater-than>
       </and>
     </condition>
@@ -98,4 +104,3 @@
   </particlesystem>
 
 </PropertyList>
-

@@ -1,30 +1,25 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
   <path>WhiteLight.ac</path>
 
   <animation>
+    <type>noshadow</type>
     <object-name>Light</object-name>
   </animation>
-  
-  <!-- Transparency for Rembrandt -->
-  <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <object-name>Light</object-name>
-  </effect>
-  
+
   <animation>
     <type>alpha-test</type>
     <alpha-factor>0.01</alpha-factor>
   </animation>
-  
+
   <animation>
     <type>billboard</type>
     <object-name>Light</object-name>
     <spherical type="bool">true</spherical>
   </animation>
-  
+
   <animation>
     <type>select</type>
     <object-name>Light</object-name>
@@ -32,17 +27,18 @@
       <property>/sim/model/lights/sbc1/state</property>
     </condition>
   </animation>
-  
+
   <animation>
     <type>material</type>
     <object-name>Light</object-name>
     <emission>
-      <red>   2 </red>
-      <green> 2 </green>
-      <blue>  2 </blue>
+      <red>   1.0 </red>
+      <green> 1.0 </green>
+      <blue>  1.0 </blue>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
     </emission>
   </animation>
-  
+
   <animation>
     <type>dist-scale</type>
     <object-name>Light</object-name>
@@ -51,14 +47,6 @@
       <entry><ind>   20 </ind><dep> 0.50 </dep></entry>
       <entry><ind> 1500 </ind><dep> 5.00 </dep></entry>
     </interpolation>
-  </animation>
-
-  <animation>
-    <type>select</type>
-    <object-name>Light</object-name>
-    <condition>
-      <property>controls/lighting/strobe-lights</property>
-    </condition>
   </animation>
 
 </PropertyList>

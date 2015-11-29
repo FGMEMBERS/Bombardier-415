@@ -17,9 +17,12 @@
           <value>19</value>
         </greater-than>
         <or>
-          <property>gear/gear[3]/wow</property>
-          <property>gear/gear[4]/wow</property>
-          <property>gear/gear[5]/wow</property>
+          <!-- /gear/gear[3]/wow -->
+          <property>sim/multiplay/generic/float[11]</property>
+          <!-- /gear/gear[4]/wow -->
+          <property>sim/multiplay/generic/float[12]</property>
+          <!-- /gear/gear[5]/wow -->
+          <property>sim/multiplay/generic/float[13]</property>
         </or>
         <not-equals>
           <property>sim/crashed</property>

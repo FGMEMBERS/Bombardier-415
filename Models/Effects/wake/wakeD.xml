@@ -16,7 +16,8 @@
           <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
           <value>19</value>
         </greater-than>
-        <property>gear/gear[7]/wow</property>
+        <!-- /gear/gear[7]/wow -->
+        <property>sim/multiplay/generic/float[15]</property>
         <not-equals>
           <property>sim/crashed</property>
           <value>true</value>

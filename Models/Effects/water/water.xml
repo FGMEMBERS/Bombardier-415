@@ -6,9 +6,8 @@
   <particlesystem>
     <name>water</name>
     <offsets>
-      <pitch-deg> 60 </pitch-deg>
+      <pitch-deg> 0 </pitch-deg>
     </offsets>
-
 
     <texture>water.png</texture>
 
@@ -31,8 +30,11 @@
       <phi-min-deg>   -1.5 </phi-min-deg>
       <phi-max-deg>    8.0 </phi-max-deg>
       <speed-mps>
-        <value>  1.5 </value>
-        <spread> 2.5 </spread>
+        <value>
+          <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+          <factor> -0.5144 </factor>
+        </value>
+        <spread> 5 </spread>
       </speed-mps>
       <rotation-speed>
         <x-min-deg-sec>  5 </x-min-deg-sec>
@@ -79,7 +81,7 @@
         <value> 15 </value>
       </life-sec>
 
-      <mass-kg> 10000 </mass-kg>
+      <mass-kg> 100000 </mass-kg>
       <radius-m>    5 </radius-m>
 
     </particle>

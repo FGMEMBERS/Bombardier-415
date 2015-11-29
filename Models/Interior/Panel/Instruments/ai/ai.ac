@@ -10,7 +10,7 @@ data 2
 ai
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 4
 0.000461 0.044759 -0.042401
 0.000461 -0.044759 -0.042401
@@ -32,7 +32,7 @@ data 6
 airoll
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 24
 0.001226 0.022477 -0.026787
 0.001226 0.017484 -0.030284
@@ -169,7 +169,7 @@ data 6
 fdbars
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 6
 0.001697 -0.003418 0.020603
 0.001697 -0.003418 -0.020603
@@ -200,7 +200,7 @@ data 4
 fond
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 96
 0.002306 0.030103 0.030103
 0.002306 0 0.042573
@@ -939,7 +939,7 @@ data 7
 pointer
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 5
 0.002053 -0.000098 -0
 0.002053 -0.00793 -0.020603
@@ -967,7 +967,7 @@ data 7
 rollptr
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 3
 0.001226 0.029027 -0.003356
 0.001226 0.029027 0.003356
@@ -985,7 +985,7 @@ name "vitre"
 loc 0 0 -0
 data 5
 vitre
-crease 30.000001
+crease 180.000005
 numvert 4
 0.004407 -0.045936 0.045944
 0.004407 0.045953 0.045944
