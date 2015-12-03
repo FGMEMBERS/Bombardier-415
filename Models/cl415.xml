@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -46,13 +46,22 @@
     <object-name>flotteurG</object-name>
     <object-name>flotteurD</object-name>
     <object-name>surailes</object-name>
-    <object-name>trous</object-name>
-
-    <object-name>roueA</object-name>
-    <object-name>axeA</object-name>
     <object-name>porteG</object-name>
     <object-name>porteD</object-name>
-
+    <object-name>trappeG</object-name>
+    <object-name>trappeD</object-name>
+    <object-name>trappeGE</object-name>
+    <object-name>trappeGI</object-name>
+    <object-name>trappeDI</object-name>
+    <object-name>trappeDE</object-name>
+    <object-name>ecopes</object-name>
+    <object-name>porteA</object-name>
+    <object-name>porteB</object-name>
+    <object-name>porteC</object-name>
+    
+    <object-name>trous</object-name>
+    <object-name>roueA</object-name>
+    <object-name>axeA</object-name>
     <object-name>roueG</object-name>
     <object-name>axeG1</object-name>
     <object-name>axeG2</object-name>
@@ -60,8 +69,6 @@
     <object-name>axeG4</object-name>
     <object-name>parapG1</object-name>
     <object-name>parapG2</object-name>
-    <object-name>trappeG</object-name>
-
     <object-name>roueD</object-name>
     <object-name>axeD1</object-name>
     <object-name>axeD2</object-name>
@@ -69,10 +76,14 @@
     <object-name>axeD4</object-name>
     <object-name>parapD1</object-name>
     <object-name>parapD2</object-name>
-    <object-name>trappeD</object-name>
-
+    <object-name>ecopeG</object-name>
+    <object-name>ecopeD</object-name>
+    
     <!-- Transparence -->
     <object-name>vitres</object-name>
+    <object-name>vitreporteA</object-name>
+    <object-name>vitreporteB</object-name>
+    <object-name>vitreporteC</object-name>
     <object-name>propdiscG</object-name>
     <object-name>propblurG</object-name>
     <object-name>propdiscD</object-name>
@@ -83,8 +94,8 @@
     <type>material</type>
     <object-name>fuselage</object-name>
     <object-name>ailes</object-name>
-    <object-name>moteurs</object-name>
     <object-name>derive</object-name>
+    <object-name>moteurs</object-name>
     <object-name>derive2</object-name>
     <object-name>bolG</object-name>
     <object-name>bolD</object-name>
@@ -99,13 +110,22 @@
     <object-name>flotteurG</object-name>
     <object-name>flotteurD</object-name>
     <object-name>surailes</object-name>
-    <object-name>trous</object-name>
-
-    <object-name>roueA</object-name>
-    <object-name>axeA</object-name>
     <object-name>porteG</object-name>
     <object-name>porteD</object-name>
-
+    <object-name>trappeG</object-name>
+    <object-name>trappeD</object-name>
+    <object-name>trappeGE</object-name>
+    <object-name>trappeGI</object-name>
+    <object-name>trappeDI</object-name>
+    <object-name>trappeDE</object-name>
+    <object-name>ecopes</object-name>
+    <object-name>porteA</object-name>
+    <object-name>porteB</object-name>
+    <object-name>porteC</object-name>
+    
+    <object-name>trous</object-name>
+    <object-name>roueA</object-name>
+    <object-name>axeA</object-name>
     <object-name>roueG</object-name>
     <object-name>axeG1</object-name>
     <object-name>axeG2</object-name>
@@ -113,8 +133,6 @@
     <object-name>axeG4</object-name>
     <object-name>parapG1</object-name>
     <object-name>parapG2</object-name>
-    <object-name>trappeG</object-name>
-    
     <object-name>roueD</object-name>
     <object-name>axeD1</object-name>
     <object-name>axeD2</object-name>
@@ -122,7 +140,8 @@
     <object-name>axeD4</object-name>
     <object-name>parapD1</object-name>
     <object-name>parapD2</object-name>
-    <object-name>trappeD</object-name>
+    <object-name>ecopeG</object-name>
+    <object-name>ecopeD</object-name>
     
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
@@ -132,22 +151,14 @@
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
   </animation>
 
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
-    <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-    </condition>
     <object-name>fuselage</object-name>
     <object-name>ailes</object-name>
-    <object-name>moteurs</object-name>
     <object-name>derive</object-name>
+    <object-name>moteurs</object-name>
     <object-name>derive2</object-name>
     <object-name>bolG</object-name>
     <object-name>bolD</object-name>
@@ -162,74 +173,35 @@
     <object-name>flotteurG</object-name>
     <object-name>flotteurD</object-name>
     <object-name>surailes</object-name>
-
     <object-name>porteG</object-name>
     <object-name>porteD</object-name>
-
-    <object-name>parapG1</object-name>
-    <object-name>parapG2</object-name>
-
-    <object-name>parapD1</object-name>
-    <object-name>parapD2</object-name>
+    <object-name>trappeG</object-name>
+    <object-name>trappeD</object-name>
+    <object-name>trappeGE</object-name>
+    <object-name>trappeGI</object-name>
+    <object-name>trappeDI</object-name>
+    <object-name>trappeDE</object-name>
+    <object-name>ecopes</object-name>
+    <object-name>porteA</object-name>
+    <object-name>porteB</object-name>
+    <object-name>porteC</object-name>
   </effect>
-
-  <effect>
-    <inherits-from>Effects/model-combined-deferred</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
-    <object-name>fuselage</object-name>
-    <object-name>ailes</object-name>
-    <object-name>moteurs</object-name>
-    <object-name>derive</object-name>
-    <object-name>derive2</object-name>
-    <object-name>bolG</object-name>
-    <object-name>bolD</object-name>
-    <object-name>aileronG</object-name>
-    <object-name>aileronD</object-name>
-    <object-name>voletG</object-name>
-    <object-name>voletD</object-name>
-    <object-name>profondeur</object-name>
-    <object-name>direction</object-name>
-    <object-name>heliceG</object-name>
-    <object-name>heliceD</object-name>
-    <object-name>flotteurG</object-name>
-    <object-name>flotteurD</object-name>
-    <object-name>surailes</object-name>
-    
-    <object-name>porteG</object-name>
-    <object-name>porteD</object-name>
-    
-    <object-name>parapG1</object-name>
-    <object-name>parapG2</object-name>
-    
-    <object-name>parapD1</object-name>
-    <object-name>parapD2</object-name>
-  </effect>
-  
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitres</object-name>
-    <object-name>propdiscG</object-name>
-    <object-name>propblurG</object-name>
-    <object-name>propdiscD</object-name>
-    <object-name>propblurD</object-name>
-  </animation>
 
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
+    <inherits-from>Aircraft/Bombardier-415/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>
+    <object-name>vitreporteA</object-name>
+    <object-name>vitreporteB</object-name>
+    <object-name>vitreporteC</object-name>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>vitres</object-name>
+    <object-name>vitreporteA</object-name>
+    <object-name>vitreporteB</object-name>
+    <object-name>vitreporteC</object-name>
     <object-name>propdiscG</object-name>
     <object-name>propblurG</object-name>
     <object-name>propdiscD</object-name>
@@ -238,7 +210,7 @@
   
   <!-- Une ombre pour OSG -->
   <model>
-  <path>Aircraft/Bombardier-415/Models/shadow.xml</path>
+    <path>Aircraft/Bombardier-415/Models/shadow.xml</path>
     <offsets>
       <x-m>  0 </x-m>
       <y-m>  0 </y-m>
@@ -248,16 +220,9 @@
   
   <!-- Interieur -->
   <model>
-    <name>Interieur</name>
     <path>Aircraft/Bombardier-415/Models/Interior/interior.xml</path>
   </model>
 
-  <!-- For Rembrandt -->
-  <animation>
-    <type>noshadow</type>
-    <object-name>Interieur</object-name>
-  </animation>
-  
   <!-- Trainée Centrale -->
   <model>
     <path>Aircraft/Bombardier-415/Models/Effects/wake/wake.xml</path>
@@ -343,6 +308,27 @@
     </offsets>
   </model>
 
+  <!-- airdrop of water -->
+  <!-- Left -->
+  <model>
+    <path>Aircraft/Bombardier-415/Models/Effects/water/water.xml</path>
+    <offsets>
+      <x-m> -2.08290 </x-m>
+      <y-m> -0.49738 </y-m>
+      <z-m> -3.78091 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Right -->
+  <model>
+    <path>Aircraft/Bombardier-415/Models/Effects/water/water.xml</path>
+    <offsets>
+      <x-m> -2.08290 </x-m>
+      <y-m>  0.49738 </y-m>
+      <z-m> -3.78091 </z-m>
+    </offsets>
+  </model>
+  
   <!-- Les hélices --> 
   <animation>
     <name>HeliceGauche</name>
@@ -948,6 +934,70 @@
     </axis>
   </animation>
 
+  <!-- Compression -->
+  <animation>
+    <name>RoueAvant</name>
+    <object-name>axeA</object-name>
+    <object-name>roueA</object-name>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>RoueAvant</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.15 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>RoueGauche</name>
+    <object-name>axeG1</object-name>
+    <object-name>roueG</object-name>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>RoueGauche</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.3 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>RoueDroite</name>
+    <object-name>axeD1</object-name>
+    <object-name>roueD</object-name>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>RoueDroite</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.3 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
   <!-- Rotation de la roue avant en fonction de la gouverne de direction -->
   <animation>
     <type>rotate</type>
@@ -1017,7 +1067,236 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
+  <!-- Portes -->
+  <animation>
+    <name>PorteAvant</name>
+    <object-name>porteA</object-name>
+    <object-name>vitreporteA</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>PorteAvant</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.porteA.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>PorteAvant</object-name>
+    <property>sim/model/door-positions/porteA/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -178 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -6.34790 </x-m>
+      <y-m> -1.31484 </y-m>
+      <z-m> -1.97753 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>PorteArriereGauche</name>
+    <object-name>porteB</object-name>
+    <object-name>vitreporteB</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>PorteArriereGauche</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.porteB.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>PorteArriereGauche</object-name>
+    <property>sim/model/door-positions/porteB/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>    0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -175 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  1.40890 </x-m>
+      <y-m> -1.09319 </y-m>
+      <z-m> -1.82723 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <name>PorteArriereDroite</name>
+    <object-name>porteC</object-name>
+    <object-name>vitreporteC</object-name>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>PorteArriereDroite</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.porteC.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>PorteArriereDroite</object-name>
+    <property>sim/model/door-positions/porteC/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 175 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  1.62939 </x-m>
+      <y-m>  1.06325 </y-m>
+      <z-m> -1.83128 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <!-- Ecopes -->
+  <animation>
+    <type>translate</type>
+    <object-name>ecopeG</object-name>
+    <property>sim/model/door-positions/ecopes/position-norm</property>
+    <interpolation>
+      <entry><ind> 1 </ind><dep> 0.0000 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0.1121 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0.000 </x>
+      <y> 0.026 </y>
+      <z> 0.109 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>ecopeD</object-name>
+    <property>sim/model/door-positions/ecopes/position-norm</property>
+    <interpolation>
+      <entry><ind> 1 </ind><dep> 0.0000 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0.1121 </dep></entry>
+    </interpolation>
+    <axis>
+      <x>  0.000 </x>
+      <y> -0.026 </y>
+      <z>  0.109 </z>
+    </axis>
+  </animation>
+  
+  <!-- Trappes de largage d'eau -->
+  <animation>
+    <type>rotate</type>
+    <object-name>trappeGE</object-name>
+    <property>sim/model/door-positions/water/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> -75 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -75 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -2.81602 </x1-m>
+      <y1-m> -1.09203 </y1-m>
+      <z1-m> -3.55518 </z1-m>
+      <x2-m> -1.67045 </x2-m>
+      <y2-m> -1.09203 </y2-m>
+      <z2-m> -3.56677 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>trappeGI</object-name>
+    <property>sim/model/door-positions/water/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> -67 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -67 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -2.81602 </x1-m>
+      <y1-m> -0.69203 </y1-m>
+      <z1-m> -3.66343 </z1-m>
+      <x2-m> -1.67045 </x2-m>
+      <y2-m> -0.69203 </y2-m>
+      <z2-m> -3.68224 </z2-m>
+    </axis>
+  </animation>
+   
+  <animation>
+    <type>rotate</type>
+    <object-name>trappeDE</object-name>
+    <property>sim/model/door-positions/water/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 75 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 75 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -2.81602 </x1-m>
+      <y1-m>  1.09203 </y1-m>
+      <z1-m> -3.55518 </z1-m>
+      <x2-m> -1.67045 </x2-m>
+      <y2-m>  1.09203 </y2-m>
+      <z2-m> -3.56677 </z2-m>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>trappeDI</object-name>
+    <property>sim/model/door-positions/water/position-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.2 </ind><dep> 67 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 67 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -2.81602 </x1-m>
+      <y1-m>  0.69203 </y1-m>
+      <z1-m> -3.66343 </z1-m>
+      <x2-m> -1.67045 </x2-m>
+      <y2-m>  0.69203 </y2-m>
+      <z2-m> -3.68224 </z2-m>
+    </axis>
+  </animation>
+  
   <!-- Ajout des effets lumineux -->
   <model>
     <path>Aircraft/Bombardier-415/Models/light/beacon.xml</path>

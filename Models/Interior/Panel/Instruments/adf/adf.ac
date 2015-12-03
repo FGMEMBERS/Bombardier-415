@@ -10,7 +10,7 @@ data 9
 CRSneedle
 texture "adf.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 98
 0.001377 0.028995 -0.001487
 0.001377 -0.034503 -0.001487
@@ -453,7 +453,7 @@ data 10
 CRSneedle2
 texture "adf.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 4
 0.001363 0.013596 0.001464
 0.001363 0.013596 -0.001487
@@ -475,7 +475,7 @@ data 8
 FromFlag
 texture "adf.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 4
 0.000959 -0.010712 0.00001
 0.000959 -0.00402 0.004607
@@ -502,7 +502,7 @@ data 7
 HDGface
 texture "adf.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 9
 0.000139 0.00004 0.000001
 0.000138 0.042616 0.017504
@@ -570,7 +570,7 @@ data 11
 NAV1pointer
 texture "adf.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 21
 0.001011 0.02653 -0.003971
 0.001011 0.024004 -0.00543
@@ -695,7 +695,7 @@ data 11
 NAV2pointer
 texture "adf.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 25
 0.00103 0.034152 -0.00039
 0.00103 0.029005 -0.005209
@@ -822,7 +822,7 @@ data 6
 ToFlag
 texture "adf.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 4
 0.000959 0.010874 0.000004
 0.000959 0.004182 -0.004593
@@ -849,7 +849,7 @@ data 6
 Warrow
 texture "adf.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 7
 0.002262 -0.031208 0.037759
 0.002262 -0.036747 0.037759
@@ -880,7 +880,7 @@ data 4
 fond
 texture "adf.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 96
 0.002306 0.030103 0.030103
 0.002306 0 0.042573
@@ -1619,7 +1619,7 @@ data 6
 hdgbug
 texture "adf.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 12
 0.000418 0.042148 0.000066
 0.000419 0.045203 -0.002172
@@ -1668,7 +1668,7 @@ name "vitre"
 loc 0 0 -0
 data 5
 vitre
-crease 30.000001
+crease 180.000005
 numvert 4
 0.004407 -0.045936 0.045944
 0.004407 0.045953 0.045944

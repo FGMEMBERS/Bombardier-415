@@ -1,30 +1,8 @@
 # =====
 # Doors
 # =====
-
-Doors = {};
-
-Doors.new = func {
-   obj = { parents : [Doors],
-           crew : aircraft.door.new("instrumentation/doors/crew", 8.0),
-           passenger : aircraft.door.new("instrumentation/doors/passenger", 10.0)
-         };
-   return obj;
-};
-
-Doors.crewexport = func {
-   me.crew.toggle();
-}
-
-Doors.passengerexport = func {
-   me.passenger.toggle();
-}
-
-
-# ==============
-# Initialization
-# ==============
-
-# objects must be here, otherwise local to init()
-doorsystem = Doors.new();
-
+porteA  = aircraft.door.new("/sim/model/door-positions/porteA", 2, 0 );
+porteB  = aircraft.door.new("/sim/model/door-positions/porteB", 2, 0 );
+porteC  = aircraft.door.new("/sim/model/door-positions/porteC", 2, 0 );
+water   = aircraft.door.new("/sim/model/door-positions/water", 2, 0 );
+ecopes  = aircraft.door.new("/sim/model/door-positions/ecopes", 2, 0 );
