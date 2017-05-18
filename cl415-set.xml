@@ -9,6 +9,20 @@
     
     <flight-model>yasim</flight-model>
     <aero>cl415-yasim</aero>
+
+    <tags>
+      <tag>canadair</tag>
+      <tag>mid-wing</tag>
+      <tag>seaplane</tag>
+      <tag>retractable-gear</tag>
+      <tag>twin-engine</tag>
+      <tag>turboprop</tag>
+      <tag>variable-pitch</tag>
+      <tag>cargo</tag>
+      <tag>1990s</tag>
+      <tag>2000s</tag>
+      <tag>2010s</tag>
+    </tags>
     
     <rating>
       <FDM type="int">     2 </FDM>
